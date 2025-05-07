@@ -174,7 +174,7 @@
         $scope.editTask = function(task) {
           $scope.task = {
             ...task,
-            due_date: formatToInputDate(task.due_date)
+            due_date: $scope.formatToInputDate(task.due_date)
           };
           $scope.editingTaskIndex = $scope.taskList.indexOf(task);
         };
@@ -199,25 +199,34 @@
           localStorage.setItem('isDarkMode', JSON.stringify($scope.isDarkMode));
         };
 
+        $scope.formatToInputDate = function(dateStr) {
+          if (!dateStr) return '';
+          var d = new Date(dateStr);
+          var year = d.getFullYear();
+          var month = String(d.getMonth() + 1).padStart(2, '0');
+          var day = String(d.getDate()).padStart(2, '0');
+          return `${year}-${month}-${day}`;
+        };
+
         $scope.getFilteredTasks = function() {
           return $scope.taskList.filter(function(task) {
             const statusMatch =
               $scope.filterStatus === 'All' ||
               ($scope.filterStatus === 'Completed' && task.completed) ||
               ($scope.filterStatus === 'Pending' && !task.completed);
-            const dateMatch = !$scope.searchTerm || task.due_date.includes($scope.searchTerm);
+            const dateMatch = !$scope.searchTerm || $scope.formatToInputDate(task.due_date) === $scope.searchTerm;
             return statusMatch && dateMatch;
           });
         };
 
         $scope.getFilteredCompletedCount = function () {
           const filtered = $scope.getFilteredTasks();
-          return filtered.length === 0 ? 0 : filtered.filter(task => task.completed).length;
+          return filtered.filter(task => task.completed).length;
         };
 
         $scope.getFilteredPendingCount = function () {
           const filtered = $scope.getFilteredTasks();
-          return filtered.length === 0 ? 0 : filtered.filter(task => !task.completed).length;
+          return filtered.filter(task => !task.completed).length;
         };
 
         $scope.formatDate = function(dateStr) {
@@ -236,15 +245,6 @@
           today.setHours(0, 0, 0, 0);
           return dueDate < today && !task.completed;
         };
-
-        function formatToInputDate(dateStr) {
-          if (!dateStr) return '';
-          var d = new Date(dateStr);
-          var year = d.getFullYear();
-          var month = String(d.getMonth() + 1).padStart(2, '0');
-          var day = String(d.getDate()).padStart(2, '0');
-          return `${year}-${month}-${day}`;
-        }
       });
   </script>
 </body>
