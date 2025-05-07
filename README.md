@@ -6,3 +6,4 @@ A responsive and user-friendly task manager built with AngularJS, Bootstrap 5, a
 ![Task-Manager](https://github.com/user-attachments/assets/ca1885ad-dadf-45d2-a9f2-69a2182c68a7)
 
 ![task](https://github.com/user-attachments/assets/c675ecd2-d4ea-4846-9625-fdfc1cd6e80d)
+![task](https://github.com/user-attachments/assets/b460772d-4a14-4f4f-a120-a002d4c0e0b3)
