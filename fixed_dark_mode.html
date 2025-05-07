@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Hola! Welcome - Fixed Dark Mode</title>
+<link rel="stylesheet" href="font.css" />
+<link rel="stylesheet" href="output.css" />
+<link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+<script src="./matter.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.12.0/matter.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/matter-wrap@0.2.0/build/matter-wrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/matter-attractors@0.1.6/build/matter-attractors.min.js"></script>
+</head>
+<body class="bg-[#111] text-white font-['Nunito'] transition-colors duration-300">
+
+<!-- Keep the user's original body content -->
+<!-- Inserted Dark Mode/Light Mode Script -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const sunIcon = document.querySelector('.feather-sun');
+  const moonIcon = document.querySelector('.feather-sun + svg');
+  const body = document.body;
+
+  sunIcon.addEventListener('click', function() {
+    body.classList.remove('bg-white', 'text-black');
+    body.classList.add('bg-[#111]', 'text-white');
+    sunIcon.classList.add('hidden');
+    moonIcon.classList.remove('hidden');
+  });
+
+  moonIcon.addEventListener('click', function() {
+    body.classList.remove('bg-[#111]', 'text-white');
+    body.classList.add('bg-white', 'text-black');
+    moonIcon.classList.add('hidden');
+    sunIcon.classList.remove('hidden');
+  });
+});
+</script>
+
+<!-- End script -->
+</body>
+</html>
