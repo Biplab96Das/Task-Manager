@@ -1,73 +1,60 @@
-1. Clone the Repository
-First, clone the project repository from GitHub to your local machine.
+# Task Manager
 
-bash
-Copy
-Edit
+## Description
+The **Task Manager** is a simple task management application that allows users to add, edit, delete, and toggle the status of tasks (completed/pending). It includes features like dark mode, task filtering by status, and displays task counts for completed and pending tasks.
+
+## Features
+
+- **Add Tasks**: Create tasks with a title, description, due date, and priority.
+- **Edit Tasks**: Edit existing tasks with the ability to update all details.
+- **Delete Tasks**: Delete any tasks from the task list.
+- **Task Status Toggle**: Toggle tasks between "Completed" and "Pending" status.
+- **Dark Mode**: Toggle between light and dark modes.
+- **Filter Tasks**: Filter tasks by status (All, Completed, Pending) and search tasks by due date.
+- **Deadline Alert**: Show alert for overdue tasks.
+
+## Installation and Setup
+
+To run the **Task Manager** project, first clone the repository using:
+
+```bash
 git clone https://github.com/Biplab96Das/Task-Manager.git
-2. Navigate to the Project Directory
-Once the repository is cloned, navigate into the project folder.
+Then, navigate into the project directory:
 
 bash
 Copy
 Edit
 cd Task-Manager
-3. Install Node.js
-Make sure Node.js is installed on your system. You can check by running:
+Make sure Node.js and Angular CLI are installed on your machine. You can check if Node.js is installed by running:
 
 bash
 Copy
 Edit
 node -v
-If it’s not installed, download and install Node.js from the official website: Node.js Official Website.
+If it's not installed, download it from here.
 
-4. Install Dependencies
-This project requires various npm dependencies (like Angular, Bootstrap, etc.). To install these, run the following command inside the project directory:
+To install Angular CLI, run:
+
+bash
+Copy
+Edit
+npm install -g @angular/cli
+Once Node.js and Angular CLI are installed, navigate to the project folder and run:
 
 bash
 Copy
 Edit
 npm install
-This will install all the necessary dependencies listed in the package.json file.
-
-5. Serve the Application Locally
-Now that all dependencies are installed, you can run the application using the Angular CLI:
+This will install all the necessary dependencies. Next, run:
 
 bash
 Copy
 Edit
 ng serve
-This will start the Angular development server. The application will be available at http://localhost:4200 by default.
+This will start the Angular development server. Finally, open the project in your browser at:
 
-6. Open the Application in Your Browser
-Open your browser and go to:
-
-arduino
+text
 Copy
 Edit
-http://localhost:4200
-You should see the Task Manager application running locally.
-
-7. (Optional) Build for Production
-If you want to create a production build of the application, use the following command:
-
-bash
-Copy
-Edit
-ng build --prod
-This will create a production-ready build in the dist/ folder, optimized for performance. You can then deploy it to a web server.
-
-8. Using the Application
-Adding Tasks: You can create new tasks by filling in the title, description, due date, and priority.
-
-Editing Tasks: Click the "Edit" button next to a task to modify its details.
-
-Deleting Tasks: Remove tasks by clicking the "Delete" button next to each one.
-
-Changing Task Status: You can mark tasks as "Completed" or "Pending" by clicking on the appropriate buttons.
-
-Dark Mode: Toggle between dark and light modes by clicking the sun/moon icon.
-
-Filtering Tasks: Filter tasks by their status using the dropdown menu.
-
-Due Date Search: You can search tasks by their due date using the search input.
+http://127.0.0.1:5500/index.html
+You should now be able to view the Task Manager running locally in your browser.
