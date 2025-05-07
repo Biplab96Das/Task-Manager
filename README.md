@@ -16,45 +16,20 @@ The **Task Manager** is a simple task management application that allows users t
 ## Installation and Setup
 
 To run the **Task Manager** project, first clone the repository using:
-
-```bash
-git clone https://github.com/Biplab96Das/Task-Manager.git
+     git clone https://github.com/Biplab96Das/Task-Manager.git
 Then, navigate into the project directory:
-
-bash
-Copy
-Edit
-cd Task-Manager
-Make sure Node.js and Angular CLI are installed on your machine. You can check if Node.js is installed by running:
-
-bash
-Copy
-Edit
-node -v
-If it's not installed, download it from here.
-
+     cd Task-Manager
+Make sure Node.js and Angular CLI are installed on your machine.
+You can check if Node.js is installed by running version check:
+     node -v
+If it's not installed, download it from here:
+     https://nodejs.org/en/download
 To install Angular CLI, run:
-
-bash
-Copy
-Edit
-npm install -g @angular/cli
+    npm install -g @angular/cli
 Once Node.js and Angular CLI are installed, navigate to the project folder and run:
-
-bash
-Copy
-Edit
-npm install
+     npm install
 This will install all the necessary dependencies. Next, run:
-
-bash
-Copy
-Edit
-ng serve
+     ng serve
 This will start the Angular development server. Finally, open the project in your browser at:
-
-text
-Copy
-Edit
-http://127.0.0.1:5500/index.html
+     http://127.0.0.1:5500/index.html
 You should now be able to view the Task Manager running locally in your browser.
